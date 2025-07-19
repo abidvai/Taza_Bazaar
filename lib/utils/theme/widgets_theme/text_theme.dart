@@ -1,64 +1,65 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:taza_bazar/utils/constants/colors.dart';
 
 class ATextTheme {
   ATextTheme._();
 
   static TextTheme lightTextTheme = TextTheme(
-    headlineLarge: TextStyle().copyWith(
+    headlineLarge: GoogleFonts.nunito(
       fontSize: 32.0,
       fontWeight: FontWeight.bold,
       color: AColors.dark,
     ),
-    headlineMedium: const TextStyle().copyWith(
+    headlineMedium: GoogleFonts.nunito(
       fontSize: 24.0,
       fontWeight: FontWeight.w600,
       color: AColors.dark,
     ),
-    headlineSmall: const TextStyle().copyWith(
+    headlineSmall: GoogleFonts.nunito(
       fontSize: 18.0,
       fontWeight: FontWeight.w600,
       color: AColors.dark,
     ),
 
-    titleLarge: const TextStyle().copyWith(
+    titleLarge: GoogleFonts.nunito(
       fontSize: 16.0,
       fontWeight: FontWeight.w600,
       color: AColors.dark,
     ),
-    titleMedium: const TextStyle().copyWith(
+    titleMedium: GoogleFonts.nunito(
       fontSize: 16.0,
       fontWeight: FontWeight.w500,
       color: AColors.dark,
     ),
-    titleSmall: const TextStyle().copyWith(
+    titleSmall: GoogleFonts.nunito(
       fontSize: 16.0,
       fontWeight: FontWeight.w400,
       color: AColors.dark,
     ),
 
-    bodyLarge: const TextStyle().copyWith(
+    bodyLarge: GoogleFonts.nunito(
       fontSize: 14.0,
       fontWeight: FontWeight.w500,
       color: AColors.dark,
     ),
-    bodyMedium: const TextStyle().copyWith(
+    bodyMedium: GoogleFonts.nunito(
       fontSize: 14.0,
       fontWeight: FontWeight.normal,
       color: AColors.dark,
     ),
-    bodySmall: const TextStyle().copyWith(
+    bodySmall: GoogleFonts.nunito(
       fontSize: 14.0,
       fontWeight: FontWeight.w500,
       color: AColors.dark.withValues(alpha: 0.5),
     ),
 
-    labelLarge: const TextStyle().copyWith(
+    labelLarge: GoogleFonts.nunito(
       fontSize: 12.0,
       fontWeight: FontWeight.normal,
       color: AColors.dark,
     ),
-    labelMedium: const TextStyle().copyWith(
+    labelMedium: GoogleFonts.nunito(
       fontSize: 12.0,
       fontWeight: FontWeight.normal,
       color: AColors.dark.withValues(alpha: 0.5),
@@ -66,60 +67,60 @@ class ATextTheme {
   );
 
   static TextTheme darkTextTheme = TextTheme(
-    headlineLarge: const TextStyle().copyWith(
+    headlineLarge: GoogleFonts.nunito(
       fontSize: 32.0,
       fontWeight: FontWeight.bold,
       color: AColors.light,
     ),
-    headlineMedium: const TextStyle().copyWith(
+    headlineMedium: GoogleFonts.nunito(
       fontSize: 24.0,
       fontWeight: FontWeight.w600,
       color: AColors.light,
     ),
-    headlineSmall: const TextStyle().copyWith(
+    headlineSmall: GoogleFonts.nunito(
       fontSize: 18.0,
       fontWeight: FontWeight.w600,
       color: AColors.light,
     ),
 
-    titleLarge: const TextStyle().copyWith(
+    titleLarge: GoogleFonts.nunito(
       fontSize: 16.0,
       fontWeight: FontWeight.w600,
       color: AColors.light,
     ),
-    titleMedium: const TextStyle().copyWith(
+    titleMedium: GoogleFonts.nunito(
       fontSize: 16.0,
       fontWeight: FontWeight.w500,
       color: AColors.light,
     ),
-    titleSmall: const TextStyle().copyWith(
+    titleSmall: GoogleFonts.nunito(
       fontSize: 16.0,
       fontWeight: FontWeight.w400,
       color: AColors.light,
     ),
 
-    bodyLarge: const TextStyle().copyWith(
+    bodyLarge: GoogleFonts.nunito(
       fontSize: 14.0,
       fontWeight: FontWeight.w500,
       color: AColors.light,
     ),
-    bodyMedium: const TextStyle().copyWith(
+    bodyMedium: GoogleFonts.nunito(
       fontSize: 14.0,
       fontWeight: FontWeight.normal,
       color: AColors.light,
     ),
-    bodySmall: const TextStyle().copyWith(
+    bodySmall: GoogleFonts.nunito(
       fontSize: 14.0,
       fontWeight: FontWeight.w500,
       color: AColors.light.withValues(alpha: 0.5),
     ),
 
-    labelLarge: const TextStyle().copyWith(
+    labelLarge: GoogleFonts.nunito(
       fontSize: 12.0,
       fontWeight: FontWeight.normal,
       color: AColors.light,
     ),
-    labelMedium: const TextStyle().copyWith(
+    labelMedium: GoogleFonts.nunito(
       fontSize: 12.0,
       fontWeight: FontWeight.normal,
       color: AColors.light.withValues(alpha: 0.5),

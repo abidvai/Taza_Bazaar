@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:taza_bazar/utils/constants/colors.dart';
 import 'package:taza_bazar/utils/theme/bottom_sheet_theme.dart';
 import 'package:taza_bazar/utils/theme/checkbox_theme.dart';
@@ -14,7 +15,7 @@ class AAppTheme {
 
   static ThemeData lightTheme = ThemeData(
     useMaterial3: true,
-    fontFamily: '',
+    fontFamily: GoogleFonts.nunito().fontFamily,
     brightness: Brightness.light,
     primaryColor: AColors.primary,
     disabledColor: Colors.grey,
@@ -30,7 +31,7 @@ class AAppTheme {
 
   static ThemeData darkTheme = ThemeData(
     useMaterial3: true,
-    fontFamily: '',
+    fontFamily: GoogleFonts.nunito().fontFamily,
     brightness: Brightness.dark,
     primaryColor: AColors.primary,
     disabledColor: Colors.grey,
