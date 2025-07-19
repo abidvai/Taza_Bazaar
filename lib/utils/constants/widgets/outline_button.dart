@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:taza_bazar/utils/constants/colors.dart';
 
-Widget AFilledButton(
+import '../colors.dart';
+
+Widget AOutlineButton(
     BuildContext context, String text, VoidCallback onTap
     ) {
   final size = MediaQuery.sizeOf(context);
@@ -10,15 +11,19 @@ Widget AFilledButton(
     child: Container(
       height: size.height * .05,
       decoration: BoxDecoration(
-        color: AColors.primary,
+        color: AColors.white,
         borderRadius: BorderRadius.circular(10),
+        border: Border.all(
+          color: Colors.black,
+          width: 1
+        )
       ),
       child: Center(
         child: Text(
           text,
           style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-            color: Colors.white,
-            fontSize: 20,
+            color: Colors.black,
+            fontSize: 20
           ),
         ),
       ),

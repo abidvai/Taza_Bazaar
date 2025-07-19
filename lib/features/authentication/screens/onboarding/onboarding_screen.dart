@@ -86,7 +86,7 @@ class OnboardingScreen extends StatelessWidget {
                 context,
                 onboardController.isLastPage ? 'Get Started' : 'Next',
                 () {
-                  onboardController.isLastPage ? Get.to(LoginScreen()) : onboardController.nextPage();
+                  onboardController.isLastPage ? Get.offAll(LoginScreen()) : onboardController.nextPage();
                 },
               ),
             ),
