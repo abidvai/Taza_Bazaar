@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../colors.dart';
+import '../../utils/constants/colors.dart';
 
 Widget AOutlineButton(
     BuildContext context, String text, VoidCallback onTap

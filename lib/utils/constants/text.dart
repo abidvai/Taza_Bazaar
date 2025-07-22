@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 
 class AText {
   AText._();
@@ -17,6 +16,7 @@ class AText {
   static const String rememberMe = 'Remember Me';
   static const String forgetPassword = 'Forget Password?';
   static const String orSignInWith = 'Or Sign In With';
+  static const String orSignUpWith = 'Or Sign up With';
 
   /// Signup Page
   static const String signupTitle = 'Let’s Get You Registered';

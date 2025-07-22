@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:taza_bazar/features/authentication/controllers/onboarding_controller.dart';
 
 Widget onBoardingWidget(
   BuildContext context,
@@ -9,7 +8,6 @@ Widget onBoardingWidget(
   String subTitle,
 ) {
   final size = MediaQuery.sizeOf(context);
-  final controller = OnBoardingController.instance;
 
   return Container(
     child: Column(

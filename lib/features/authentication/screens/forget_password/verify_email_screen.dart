@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:taza_bazar/common/style/padding.dart';
 import 'package:taza_bazar/features/authentication/screens/forget_password/forget_password_screen.dart';
 import 'package:taza_bazar/utils/constants/text.dart';
-import 'package:taza_bazar/utils/constants/widgets/filled_button.dart';
-
+import '../../../../common/widgets/filled_button.dart';
 import '../../../../utils/constants/images.dart';
 
 class VerifyEmailScreen extends StatelessWidget {
@@ -20,7 +20,7 @@ class VerifyEmailScreen extends StatelessWidget {
             Align(
               alignment: Alignment.centerRight,
               child: IconButton(
-                padding: EdgeInsets.only(right: size.height * .036),
+                padding: APadding.screenPadding(context),
                 onPressed: () {
                   Get.off(ForgetPasswordScreen());
                 },

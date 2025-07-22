@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:taza_bazar/common/style/padding.dart';
 import 'package:taza_bazar/features/authentication/screens/login_screen/login_screen.dart';
 import 'package:taza_bazar/utils/constants/text.dart';
-import 'package:taza_bazar/utils/constants/widgets/filled_button.dart';
-
+import '../../../../common/widgets/filled_button.dart';
 import '../../../../utils/constants/images.dart';
 
 class CongoScreen extends StatelessWidget {
@@ -25,7 +25,7 @@ class CongoScreen extends StatelessWidget {
               fit: BoxFit.cover,
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: size.height * .045),
+              padding: APadding.screenPadding(context),
               child: Column(
                 children: [
                   Text(

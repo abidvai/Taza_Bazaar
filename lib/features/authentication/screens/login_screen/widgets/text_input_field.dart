@@ -15,21 +15,6 @@ Widget aTextInputField({
       hintText: hint,
       prefixIcon: Icon(prefix),
       suffixIcon: Icon(suffix),
-      border: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(10),
-        borderSide: BorderSide(color: Colors.black, width: 2),
-      ),
-      enabledBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(10),
-        borderSide: BorderSide(color: Colors.black, width: 1),
-      ),
-      focusedBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(10),
-        borderSide: BorderSide(
-          color: Colors.black,
-          width: 2
-        )
-      )
     ),
     validator: validation,
     obscureText: obscureText ?? false,

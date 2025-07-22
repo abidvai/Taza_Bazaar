@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:taza_bazar/common/style/padding.dart';
 import 'package:taza_bazar/features/authentication/screens/forget_password/password_reset_screen.dart';
 import 'package:taza_bazar/features/authentication/screens/login_screen/login_screen.dart';
 import 'package:taza_bazar/features/authentication/screens/login_screen/widgets/text_input_field.dart';
 import 'package:taza_bazar/utils/constants/text.dart';
-import 'package:taza_bazar/utils/constants/widgets/filled_button.dart';
+import '../../../../common/widgets/filled_button.dart';
 
 class ForgetPasswordScreen extends StatelessWidget {
   ForgetPasswordScreen({super.key});
@@ -15,7 +16,7 @@ class ForgetPasswordScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 36),
+        padding: APadding.screenPadding(context),
         child: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
