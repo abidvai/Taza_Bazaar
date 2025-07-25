@@ -38,4 +38,12 @@ class AImages {
   static const String shorts = 'assets/icons/categories/shorts.png';
   static const String sports_shoes = 'assets/icons/categories/sports_shoes.png';
   static const String watch = 'assets/icons/categories/watch.png';
+
+  /// Banner Images
+  static const String banner_1 = 'assets/banners/banner_1.jpg';
+  static const String banner_2 = 'assets/banners/banner_2.jpg';
+  static const String banner_3 = 'assets/banners/banner_3.jpg';
+  static const String banner_4 = 'assets/banners/banner_4.jpg';
+  static const String banner_5 = 'assets/banners/banner_5.jpg';
+  static const String banner_6 = 'assets/banners/banner_6.jpg';
 }
