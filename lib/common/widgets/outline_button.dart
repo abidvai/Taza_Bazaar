@@ -15,7 +15,7 @@ Widget AOutlineButton(
         borderRadius: BorderRadius.circular(10),
         border: Border.all(
           color: Colors.black,
-          width: 1
+          width: 1.4
         )
       ),
       child: Center(

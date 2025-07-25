@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:iconsax/iconsax.dart';
 import 'package:taza_bazar/features/authentication/screens/login_screen/widgets/text_input_field.dart';
+import 'package:taza_bazar/navigation_menu.dart';
 import '../../../../../common/widgets/filled_button.dart';
 import '../../../../../common/widgets/outline_button.dart';
 import '../../../../../utils/constants/text.dart';
@@ -28,15 +30,15 @@ class ALoginForm extends StatelessWidget {
         aTextInputField(
           controller: emailController,
           hint: 'Email',
-          prefix: Icons.play_arrow_outlined,
+          prefix: Iconsax.direct_right,
           validation: (value) {},
         ),
         SizedBox(height: size.height * .016),
         aTextInputField(
           controller: passwordController,
           hint: 'Password',
-          prefix: Icons.keyboard,
-          suffix: Icons.visibility_off_outlined,
+          prefix: Iconsax.password_check,
+          suffix: Iconsax.eye_slash,
           validation: (value) {},
         ),
         SizedBox(height: size.height * .016),
@@ -71,7 +73,7 @@ class ALoginForm extends StatelessWidget {
         ),
         SizedBox(height: size.height * .024),
         AFilledButton(context, 'Sign In', () {
-          //TODO:
+          Get.to(NavigationMenu());
         }),
         SizedBox(height: 8),
         AOutlineButton(context, 'Create Account', () {

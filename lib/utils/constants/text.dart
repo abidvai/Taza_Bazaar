@@ -32,4 +32,10 @@ class AText {
   /// Congratulations Page
   static const String congoTitle = 'Your account successfully created';
   static const String congoSubtitle = 'Congratulations! Your account has been successfully created. You can now explore all the amazing features, start personalizing your experience, and enjoy seamless access to our services. Let’s get started!';
+
+  /// Home Screen
+  static const String welcomeMessage = 'Good Morning';
+  static const String welcomeMessageSub = 'Unknown Pro';
+  static const String searchBarTitle = 'Search in Store';
+  static const String popularCategories = 'Popular Categories';
 }

@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:taza_bazar/features/authentication/screens/congro_screen/congo_screen.dart';
-import 'package:taza_bazar/features/authentication/screens/login_screen/widgets/text_input_field.dart';
 import 'package:taza_bazar/common/widgets/login_signup/auth_bottom.dart';
 import 'package:taza_bazar/features/authentication/screens/signup_screen/widgets/signup_form.dart';
 import 'package:taza_bazar/features/authentication/screens/signup_screen/widgets/signup_header.dart';
-import 'package:taza_bazar/utils/constants/colors.dart';
-import '../../../../common/widgets/filled_button.dart';
+
 import '../../../../utils/constants/text.dart';
 
 class SignupScreen extends StatelessWidget {

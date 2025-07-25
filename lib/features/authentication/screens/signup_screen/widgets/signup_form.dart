@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:iconsax/iconsax.dart';
 
 import '../../../../../common/widgets/filled_button.dart';
 import '../../../../../utils/constants/colors.dart';
-import '../../congro_screen/congo_screen.dart';
+import 'congo_screen.dart';
 import '../../login_screen/widgets/text_input_field.dart';
 
 class SignUpForm extends StatelessWidget {
@@ -27,8 +28,6 @@ class SignUpForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool isCheck = false;
-
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
@@ -37,7 +36,7 @@ class SignUpForm extends StatelessWidget {
             Expanded(
               child: aTextInputField(
                 hint: 'First Name',
-                prefix: Icons.person,
+                prefix: Iconsax.user,
                 validation: (value) {},
                 controller: firstNameController,
               ),
@@ -46,7 +45,7 @@ class SignUpForm extends StatelessWidget {
             Expanded(
               child: aTextInputField(
                 hint: 'Last Name',
-                prefix: Icons.person,
+                prefix: Iconsax.user,
                 validation: (value) {},
                 controller: lastNameController,
               ),
@@ -56,7 +55,7 @@ class SignUpForm extends StatelessWidget {
         SizedBox(height: size.height * .016),
         aTextInputField(
             hint: 'Email',
-            prefix: Icons.play_arrow_outlined,
+            prefix: Iconsax.direct_right,
             validation: (value) {},
             controller: emailController,
             keyboardType: TextInputType.emailAddress
@@ -64,7 +63,7 @@ class SignUpForm extends StatelessWidget {
         SizedBox(height: size.height * .016),
         aTextInputField(
             hint: 'Phone Number',
-            prefix: Icons.phone_outlined,
+            prefix: Iconsax.call,
             validation: (value) {},
             controller: phoneNumberController,
             keyboardType: TextInputType.phone
@@ -72,7 +71,7 @@ class SignUpForm extends StatelessWidget {
         SizedBox(height: size.height * .016),
         aTextInputField(
           hint: 'Password',
-          prefix: Icons.keyboard_alt_outlined,
+          prefix: Iconsax.password_check,
           validation: (value) {},
           controller: passwordController,
         ),
@@ -82,8 +81,8 @@ class SignUpForm extends StatelessWidget {
         Row(
           children: [
             Checkbox(
-              value: isCheck,
-              onChanged: (value) => value = isCheck,
+              value: true,
+              onChanged: (value) => value = true,
             ),
             RichText(
               text: TextSpan(
@@ -95,6 +94,7 @@ class SignUpForm extends StatelessWidget {
                     style: TextStyle(
                       color: AColors.primary,
                       decoration: TextDecoration.underline,
+                      decorationColor: AColors.primary
                     ),
                   ),
                   TextSpan(text: ' and ', style: Theme.of(context).textTheme.labelLarge),
@@ -103,6 +103,7 @@ class SignUpForm extends StatelessWidget {
                     style: TextStyle(
                       color: AColors.primary,
                       decoration: TextDecoration.underline,
+                        decorationColor: AColors.primary
                     ),
                   ),
                 ],
