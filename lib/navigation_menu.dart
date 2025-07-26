@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:taza_bazar/features/shop/screen/home/home_screen.dart';
+import 'package:taza_bazar/features/shop/screen/store/store_screen.dart';
 import 'package:taza_bazar/utils/constants/colors.dart';
 import 'package:taza_bazar/utils/helpers/helper_functions.dart';
 
@@ -48,7 +49,7 @@ class NavigationController extends GetxController {
 
   List<Widget> screen = [
     HomeScreen(),
-    Container(color: Colors.black),
+    StoreScreen(),
     Container(color: Colors.yellow),
     Container(color: Colors.cyanAccent),
   ];

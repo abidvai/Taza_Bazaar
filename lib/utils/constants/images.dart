@@ -46,4 +46,7 @@ class AImages {
   static const String banner_4 = 'assets/banners/banner_4.jpg';
   static const String banner_5 = 'assets/banners/banner_5.jpg';
   static const String banner_6 = 'assets/banners/banner_6.jpg';
+
+  /// Product
+  static const String product_15 = 'assets/product/product_15.png';
 }

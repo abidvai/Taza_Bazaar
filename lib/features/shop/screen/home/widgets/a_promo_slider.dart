@@ -1,8 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:taza_bazar/features/shop/screen/controller/home/home_controller.dart';
-
 import '../../../../../common/rounded_image/rounded_image.dart';
+import '../../../controller/home/home_controller.dart';
 import 'banner_dot_navigation.dart';
 
 class APromoSlider extends StatelessWidget {

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:taza_bazar/utils/constants/colors.dart';
+import 'package:taza_bazar/utils/helpers/helper_functions.dart';
 
 class ASectionHeading extends StatelessWidget {
   final String title;
@@ -9,6 +11,8 @@ class ASectionHeading extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final dark = AHelperFunctions.isDarkMode(context);
+
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -22,7 +26,7 @@ class ASectionHeading extends StatelessWidget {
           onPressed: ()=> onPress,
           child: Text(
             buttonTitle,
-            style: Theme.of(context).textTheme.titleSmall,
+            style: dark ? Theme.of(context).textTheme.bodyLarge : Theme.of(context).textTheme.bodyLarge!.copyWith(color: AColors.primary),
           ),
         ),
       ],

@@ -1,17 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:taza_bazar/common/products/cart/cart_counter.dart';
+import 'package:taza_bazar/common/style/shadow.dart';
 import 'package:taza_bazar/common/textfields/searchbar.dart';
+import 'package:taza_bazar/features/authentication/screens/login_screen/login_screen.dart';
 import 'package:taza_bazar/features/shop/screen/home/widgets/a_promo_slider.dart';
 import 'package:taza_bazar/features/shop/screen/home/widgets/aprimary_header_container.dart';
 import 'package:taza_bazar/features/shop/screen/home/widgets/home_product_categories.dart';
+import 'package:taza_bazar/features/shop/screen/home/widgets/price_tag_add_to_cart.dart';
+import 'package:taza_bazar/features/shop/screen/home/widgets/product_heading_part.dart';
+import 'package:taza_bazar/features/shop/screen/product_detail/product_detail_Screen.dart';
 import 'package:taza_bazar/utils/constants/colors.dart';
 import 'package:taza_bazar/utils/constants/images.dart';
 import 'package:taza_bazar/utils/constants/text.dart';
 import '../../../../common/appbar/appbar.dart';
+import '../../../../common/widgets/product_brand.dart';
+import '../../../../common/widgets/product_title.dart';
 import '../../../../common/widgets/text/section_heading.dart';
 import '../../../../utils/helpers/helper_functions.dart';
-import '../controller/home/home_controller.dart';
+import '../../controller/home/home_controller.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -92,6 +99,71 @@ class HomeScreen extends StatelessWidget {
                   ASectionHeading(
                     title: AText.popularProducts,
                     buttonTitle: AText.viewAll,
+                  ),
+                  SizedBox(height: size.height * .016),
+
+                  /// Vertical Product card
+                  SizedBox(
+                    child: GridView.builder(
+                      shrinkWrap: true,
+                      physics: NeverScrollableScrollPhysics(),
+                      padding: EdgeInsets.zero,
+                      itemCount: 10,
+                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 2,
+                        crossAxisSpacing: size.width * .07,
+                        mainAxisSpacing: 25,
+                        mainAxisExtent: size.height * .30,
+                      ),
+                      itemBuilder: (context, index) {
+                        return GestureDetector(
+                          onTap: (){
+                            Get.to(ProductDetailScreen());
+                          },
+                          child: Container(
+                            padding: EdgeInsets.all(1),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(12),
+                              color: AColors.primary.withValues(alpha: 0.2),
+                              boxShadow: AShadow.verticalProductShadow,
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                ProductHeadingPart(
+                                  image: AImages.product_15,
+                                  discountTagPrice: '49%',
+                                ),
+                                SizedBox(height: 10),
+                                Padding(
+                                  padding: EdgeInsets.symmetric(horizontal: 10),
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      ProductTitle(
+                                        title: 'Shoes of Nike',
+                                        smallTitle: true,
+                                      ),
+                                      ProductBrand(brandName: 'Nike', isBold: false,),
+                                    ],
+                                  ),
+                                ),
+                                Spacer(),
+                                Padding(
+                                  padding: EdgeInsets.only(left: 12),
+                                  child: PriceTagAddToCart(
+                                    productPrice: '399',
+                                    beforePrice: '599',
+                                    isDiscounted: true,
+                                    onTap: ()=> Get.to(LoginScreen()),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        );
+                      },
+                    ),
                   ),
                 ],
               ),

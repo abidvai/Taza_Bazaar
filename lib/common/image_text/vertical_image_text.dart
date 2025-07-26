@@ -41,8 +41,12 @@ class VerticalImageText extends StatelessWidget {
                 backgroundColor: dark ? AColors.dark : AColors.light,
                 child: Image.asset(image),
               ),
+              SizedBox(height: 10),
               Text(
                 title,
+                style: Theme.of(
+                  context,
+                ).textTheme.bodyMedium!.copyWith(color: AColors.grey),
                 textAlign: TextAlign.center,
                 overflow: TextOverflow.ellipsis,
                 maxLines: 1,

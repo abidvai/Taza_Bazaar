@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-
-import '../../controller/home/home_controller.dart';
+import '../../../controller/home/home_controller.dart';
 
 class BannerDotNavigation extends StatelessWidget {
   const BannerDotNavigation({super.key});
