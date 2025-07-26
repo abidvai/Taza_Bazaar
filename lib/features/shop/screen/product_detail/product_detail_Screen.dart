@@ -87,7 +87,7 @@ class ProductDetailScreen extends StatelessWidget {
                 Row(
                   children: [
                     Image(image: AssetImage(AImages.cricket)),
-                    ProductBrand(brandName: 'Nike', isBold: true,)
+                    ProductBrand(brandName: 'Nike')
                   ],
                 ),
                 AFilledButton(context, 'Checkout', (){}),

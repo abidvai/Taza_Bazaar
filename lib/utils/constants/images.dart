@@ -49,4 +49,7 @@ class AImages {
 
   /// Product
   static const String product_15 = 'assets/product/product_15.png';
+
+  /// brands
+  static const String bata = 'assets/brands/bata.png';
 }

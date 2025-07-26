@@ -6,8 +6,9 @@ import '../../../../../utils/constants/colors.dart';
 
 class APrimaryHeaderContainer extends StatelessWidget {
 
-  const APrimaryHeaderContainer({super.key, required this.child});
+  const APrimaryHeaderContainer({super.key, required this.child, required this.height});
   final Widget child;
+  final double height;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,7 @@ class APrimaryHeaderContainer extends StatelessWidget {
     return ClipPath(
       clipper: ACustomRoundedEdges(),
       child: Container(
-        height: size.height * .32,
+        height: height,
         width: size.width,
         decoration: BoxDecoration(color: AColors.primary),
         child: Stack(

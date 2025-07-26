@@ -38,6 +38,7 @@ class HomeScreen extends StatelessWidget {
               clipBehavior: Clip.none,
               children: [
                 APrimaryHeaderContainer(
+                  height: size.height * .32,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -144,7 +145,7 @@ class HomeScreen extends StatelessWidget {
                                         title: 'Shoes of Nike',
                                         smallTitle: true,
                                       ),
-                                      ProductBrand(brandName: 'Nike', isBold: false,),
+                                      ProductBrand(brandName: 'Nike'),
                                     ],
                                   ),
                                 ),
