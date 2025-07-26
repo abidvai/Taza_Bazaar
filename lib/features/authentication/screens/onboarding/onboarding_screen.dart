@@ -7,7 +7,7 @@ import 'package:taza_bazar/features/authentication/screens/onboarding/widgets/on
 import 'package:taza_bazar/utils/constants/colors.dart';
 import 'package:taza_bazar/utils/constants/images.dart';
 import 'package:taza_bazar/utils/constants/text.dart';
-import 'package:taza_bazar/utils/constants/widgets/filled_button.dart';
+import '../../../../common/widgets/filled_button.dart';
 
 class OnboardingScreen extends StatelessWidget {
   OnboardingScreen({super.key});

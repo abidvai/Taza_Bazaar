@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../colors.dart';
+import '../../utils/constants/colors.dart';
 
 Widget AOutlineButton(
     BuildContext context, String text, VoidCallback onTap
@@ -15,7 +15,7 @@ Widget AOutlineButton(
         borderRadius: BorderRadius.circular(10),
         border: Border.all(
           color: Colors.black,
-          width: 1
+          width: 1.4
         )
       ),
       child: Center(

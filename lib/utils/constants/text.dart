@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 
 class AText {
   AText._();
@@ -17,6 +16,7 @@ class AText {
   static const String rememberMe = 'Remember Me';
   static const String forgetPassword = 'Forget Password?';
   static const String orSignInWith = 'Or Sign In With';
+  static const String orSignUpWith = 'Or Sign up With';
 
   /// Signup Page
   static const String signupTitle = 'Let’s Get You Registered';
@@ -32,4 +32,12 @@ class AText {
   /// Congratulations Page
   static const String congoTitle = 'Your account successfully created';
   static const String congoSubtitle = 'Congratulations! Your account has been successfully created. You can now explore all the amazing features, start personalizing your experience, and enjoy seamless access to our services. Let’s get started!';
+
+  /// Home Screen
+  static const String welcomeMessage = 'Good Morning';
+  static const String welcomeMessageSub = 'Unknown Pro';
+  static const String searchBarTitle = 'Search in Store';
+  static const String popularCategories = 'Popular Categories';
+  static const String popularProducts = 'Popular Products';
+  static const String viewAll = 'View all';
 }
