@@ -16,22 +16,20 @@ class ProductBrand extends StatelessWidget {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Expanded(
-          child: Text(
-            brandName,
-            style:
-                dark
-                    ? Theme.of(context).textTheme.bodyMedium!.copyWith(
-                      color: AColors.light.withValues(alpha: 0.5),
-                      fontWeight: FontWeight.bold,
-                    )
-                    : Theme.of(context).textTheme.bodyMedium!.copyWith(
-                      color: AColors.dark.withValues(alpha: 0.8),
-                      fontWeight: FontWeight.bold,
-                    ),
-            maxLines: 1,
-            overflow: TextOverflow.ellipsis,
-          ),
+        Text(
+          brandName,
+          style:
+              dark
+                  ? Theme.of(context).textTheme.bodyMedium!.copyWith(
+                    color: AColors.light.withValues(alpha: 0.5),
+                    fontWeight: FontWeight.bold,
+                  )
+                  : Theme.of(context).textTheme.bodyMedium!.copyWith(
+                    color: AColors.dark.withValues(alpha: 0.8),
+                    fontWeight: FontWeight.bold,
+                  ),
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
         ),
         SizedBox(width: 8),
         Icon(Iconsax.verify5, color: AColors.primary),
