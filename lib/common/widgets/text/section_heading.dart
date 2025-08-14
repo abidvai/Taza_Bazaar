@@ -6,8 +6,9 @@ class ASectionHeading extends StatelessWidget {
   final String title;
   final String buttonTitle;
   final VoidCallback? onPress;
+  final bool actionButton;
 
-  const ASectionHeading({super.key, required this.title, this.onPress, this.buttonTitle = 'View All'});
+  const ASectionHeading({super.key, required this.title, this.onPress, this.buttonTitle = 'View All', required this.actionButton});
 
   @override
   Widget build(BuildContext context) {
@@ -18,11 +19,11 @@ class ASectionHeading extends StatelessWidget {
       children: [
         Text(
           title,
-          style: Theme.of(context).textTheme.headlineSmall,
+          style: Theme.of(context).textTheme.headlineMedium,
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
         ),
-        TextButton(
+        if(actionButton) TextButton(
           onPressed: ()=> onPress,
           child: Text(
             buttonTitle,

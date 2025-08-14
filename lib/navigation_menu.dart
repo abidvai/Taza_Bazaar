@@ -7,6 +7,8 @@ import 'package:taza_bazar/features/shop/screen/wishlist/wishlist_screen.dart';
 import 'package:taza_bazar/utils/constants/colors.dart';
 import 'package:taza_bazar/utils/helpers/helper_functions.dart';
 
+import 'features/shop/screen/personalization/screen/profile/profile_screen.dart';
+
 class NavigationMenu extends StatelessWidget {
   const NavigationMenu({super.key});
 
@@ -53,6 +55,6 @@ class NavigationController extends GetxController {
     HomeScreen(),
     StoreScreen(),
     WishlistScreen(),
-    Container(color: Colors.cyanAccent),
+    ProfileScreen(),
   ];
 }

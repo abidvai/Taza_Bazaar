@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:taza_bazar/common/appbar/appbar.dart';
 import 'package:taza_bazar/common/products/product_card/product_card.dart';
+import 'package:taza_bazar/features/shop/screen/product_detail/product_detail_Screen.dart';
 import 'package:taza_bazar/navigation_menu.dart';
 import 'package:taza_bazar/utils/constants/colors.dart';
 import 'package:taza_bazar/utils/constants/images.dart';
@@ -12,6 +14,7 @@ class WishlistScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.sizeOf(context);
     final dark = AHelperFunctions.isDarkMode(context);
 
     return Scaffold(
@@ -34,13 +37,16 @@ class WishlistScreen extends StatelessWidget {
         ],
       ),
       body: GridView.builder(
-        padding: EdgeInsets.all(8),
+        shrinkWrap: true,
+        scrollDirection: Axis.vertical,
+        padding: EdgeInsets.symmetric(horizontal: 24, vertical: 24),
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
-          mainAxisExtent: 325,
+          mainAxisExtent: size.height * .3,
           mainAxisSpacing: 10,
-          crossAxisSpacing: 18
+          crossAxisSpacing: 18,
         ),
+        itemCount: 10,
         itemBuilder: (context, index) {
           return ProductCard(
             discountPriceTag: '20%',
@@ -49,6 +55,9 @@ class WishlistScreen extends StatelessWidget {
             brandName: 'Bata',
             productPrice: '124',
             isDiscount: false,
+            onTap: () {
+              Get.to(ProductDetailScreen());
+            },
           );
         },
       ),

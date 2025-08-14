@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:taza_bazar/common/products/cart/cart_counter.dart';
 import 'package:taza_bazar/common/textfields/searchbar.dart';
 import 'package:taza_bazar/features/shop/screen/home/widgets/a_promo_slider.dart';
-import 'package:taza_bazar/features/shop/screen/home/widgets/aprimary_header_container.dart';
+import 'package:taza_bazar/common/custom_shape/clipper/aprimary_header_container.dart';
 import 'package:taza_bazar/features/shop/screen/home/widgets/home_product_categories.dart';
 import 'package:taza_bazar/features/shop/screen/product_detail/product_detail_Screen.dart';
 import 'package:taza_bazar/utils/constants/colors.dart';
@@ -96,6 +96,7 @@ class HomeScreen extends StatelessWidget {
                   ASectionHeading(
                     title: AText.popularProducts,
                     buttonTitle: AText.viewAll,
+                    actionButton: true,
                   ),
                   SizedBox(height: size.height * .016),
 
@@ -108,8 +109,8 @@ class HomeScreen extends StatelessWidget {
                       itemCount: 10,
                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2,
-                        crossAxisSpacing: size.width * .07,
-                        mainAxisSpacing: 25,
+                        crossAxisSpacing: size.width * .04,
+                        mainAxisSpacing: 22,
                         mainAxisExtent: size.height * .33,
                       ),
                       itemBuilder: (context, index) {
@@ -124,7 +125,7 @@ class HomeScreen extends StatelessWidget {
                             productTitle: 'Shoes of Nike',
                             productPrice: '399',
                             discountedDeprecated: '599',
-                            onTap: () => ProductDetailScreen(),
+                            onTap: () => Get.to(ProductDetailScreen()),
                             isDiscount: true,
                           ),
                         );

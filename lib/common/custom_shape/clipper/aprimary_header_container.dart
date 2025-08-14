@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../common/custom_shape/clipper/circular_container.dart';
-import '../../../../../common/custom_shape/clipper/custom_rounded_clipper.dart';
-import '../../../../../utils/constants/colors.dart';
+import 'circular_container.dart';
+import 'custom_rounded_clipper.dart';
+import '../../../utils/constants/colors.dart';
 
 class APrimaryHeaderContainer extends StatelessWidget {
 
