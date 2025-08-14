@@ -48,7 +48,7 @@ class StoreScreen extends StatelessWidget {
 
                         child: Column(
                           children: [
-                            ASectionHeading(title: 'Brands'),
+                            ASectionHeading(title: 'Brands', actionButton: true,),
                             SizedBox(height: size.height * .011),
                             SizedBox(
                               height: size.height * .08,
@@ -114,7 +114,7 @@ class StoreScreen extends StatelessWidget {
                         brandImage: AImages.bata,
                       ),
                       SizedBox(height: size.height * .024),
-                      ASectionHeading(title: 'You might like', onPress: () {}),
+                      ASectionHeading(title: 'You might like', onPress: () {}, actionButton: true,),
                       SizedBox(
                         child: GridView.builder(
                           shrinkWrap: true,

@@ -1,6 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import '../../../../../common/rounded_image/rounded_image.dart';
+import '../../../../../common/images/rounded_image.dart';
 import '../../../controller/home/home_controller.dart';
 import 'banner_dot_navigation.dart';
 

@@ -13,6 +13,7 @@ class AImages {
   /// Authentication Image
   static const String account_creation = 'assets/logo/account_creation.png';
   static const String reset_password = 'assets/logo/reset_password_page1.png';
+  static const String profile_image = 'assets/logo/profile.png';
 
   /// Icons Categories
   static const String cloths = 'assets/icons/categories/clothes.png';
@@ -52,4 +53,5 @@ class AImages {
 
   /// brands
   static const String bata = 'assets/brands/bata.png';
+
 }
