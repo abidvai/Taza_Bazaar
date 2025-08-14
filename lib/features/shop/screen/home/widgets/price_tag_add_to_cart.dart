@@ -13,7 +13,8 @@ class PriceTagAddToCart extends StatelessWidget {
     super.key,
     required this.productPrice,
     required this.beforePrice,
-    required this.isDiscounted, this.onTap,
+    required this.isDiscounted,
+    this.onTap,
   });
 
   @override

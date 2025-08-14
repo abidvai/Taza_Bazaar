@@ -34,7 +34,7 @@ class HomeScreen extends StatelessWidget {
               clipBehavior: Clip.none,
               children: [
                 APrimaryHeaderContainer(
-                  height: size.height * .32,
+                  height: size.height * .34,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -110,7 +110,7 @@ class HomeScreen extends StatelessWidget {
                         crossAxisCount: 2,
                         crossAxisSpacing: size.width * .07,
                         mainAxisSpacing: 25,
-                        mainAxisExtent: size.height * .30,
+                        mainAxisExtent: size.height * .33,
                       ),
                       itemBuilder: (context, index) {
                         return GestureDetector(
@@ -125,6 +125,7 @@ class HomeScreen extends StatelessWidget {
                             productPrice: '399',
                             discountedDeprecated: '599',
                             onTap: () => ProductDetailScreen(),
+                            isDiscount: true,
                           ),
                         );
                       },

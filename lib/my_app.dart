@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: AAppTheme.lightTheme,
       darkTheme: AAppTheme.darkTheme,
       themeMode: ThemeMode.system,
-      home: OnboardingScreen(),
+      home: NavigationMenu(),
     );
   }
 }
