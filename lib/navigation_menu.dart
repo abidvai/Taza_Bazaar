@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:taza_bazar/features/shop/screen/home/home_screen.dart';
 import 'package:taza_bazar/features/shop/screen/store/store_screen.dart';
+import 'package:taza_bazar/features/shop/screen/wishlist/wishlist_screen.dart';
 import 'package:taza_bazar/utils/constants/colors.dart';
 import 'package:taza_bazar/utils/helpers/helper_functions.dart';
 
@@ -45,12 +46,13 @@ class NavigationMenu extends StatelessWidget {
 }
 
 class NavigationController extends GetxController {
+  static NavigationController get instance => Get.find();
   RxInt selectedIndex = 0.obs;
 
   List<Widget> screen = [
     HomeScreen(),
     StoreScreen(),
-    Container(color: Colors.yellow),
+    WishlistScreen(),
     Container(color: Colors.cyanAccent),
   ];
 }

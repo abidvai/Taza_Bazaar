@@ -13,8 +13,8 @@ class ABrandCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: size.width * .40,
-      padding: EdgeInsets.all(8),
+      width: size.width * .46,
+      padding: EdgeInsets.only(top: 14, left: 8),
       decoration: BoxDecoration(
         color: Colors.transparent,
         borderRadius: BorderRadius.circular(12),
@@ -29,7 +29,7 @@ class ABrandCard extends StatelessWidget {
               child: Image(
                 image: AssetImage(AImages.bata),
                 fit: BoxFit.cover,
-                height: 40,
+                height: 45,
               ),
             ),
           ),

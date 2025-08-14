@@ -27,7 +27,7 @@ class ProductHighlightVerticalContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: size.height * 0.2,
+      height: size.height * 0.22,
       padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),

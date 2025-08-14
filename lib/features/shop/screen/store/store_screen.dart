@@ -28,7 +28,7 @@ class StoreScreen extends StatelessWidget {
             return [
               SliverAppBar(
                 automaticallyImplyLeading: false,
-                expandedHeight: size.height * .36,
+                expandedHeight: size.height * .38,
                 surfaceTintColor: Colors.transparent,
                 shadowColor: Colors.transparent,
                 pinned: true,
@@ -41,13 +41,17 @@ class StoreScreen extends StatelessWidget {
                       SizedBox(height: size.height * .028),
 
                       Padding(
-                        padding: EdgeInsets.only(left: size.width * .024),
+                        padding: EdgeInsets.symmetric(
+                          horizontal: size.height * .024,
+                          vertical: size.width * .024,
+                        ),
+
                         child: Column(
                           children: [
                             ASectionHeading(title: 'Brands'),
                             SizedBox(height: size.height * .011),
                             SizedBox(
-                              height: size.height * .07,
+                              height: size.height * .08,
                               child: ListView.separated(
                                 separatorBuilder:
                                     (context, index) =>
@@ -82,7 +86,10 @@ class StoreScreen extends StatelessWidget {
             children: [
               SingleChildScrollView(
                 child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 24, vertical: 24),
+                  padding: EdgeInsets.symmetric(
+                    horizontal: size.height * .024,
+                    vertical: size.width * .024,
+                  ),
                   child: Column(
                     children: [
                       ProductHighlightVerticalContainer(
@@ -95,7 +102,7 @@ class StoreScreen extends StatelessWidget {
                         display1Image3: AImages.shirt,
                         brandImage: AImages.bata,
                       ),
-                      SizedBox(height: 16),
+                      SizedBox(height: size.height * .016),
                       ProductHighlightVerticalContainer(
                         size: size,
                         dark: dark,
@@ -106,7 +113,7 @@ class StoreScreen extends StatelessWidget {
                         display1Image3: AImages.shirt,
                         brandImage: AImages.bata,
                       ),
-                      SizedBox(height: 24),
+                      SizedBox(height: size.height * .024),
                       ASectionHeading(title: 'You might like', onPress: () {}),
                       SizedBox(
                         child: GridView.builder(
@@ -117,9 +124,9 @@ class StoreScreen extends StatelessWidget {
                           gridDelegate:
                               SliverGridDelegateWithFixedCrossAxisCount(
                                 crossAxisCount: 2,
-                                mainAxisExtent: size.height * .30,
-                                crossAxisSpacing: 24,
-                                mainAxisSpacing: 25,
+                                mainAxisExtent: size.height * .31,
+                                crossAxisSpacing: size.height * .025,
+                                mainAxisSpacing: size.width * .025,
                               ),
                           itemBuilder: (context, index) {
                             return ProductCard(
@@ -129,6 +136,7 @@ class StoreScreen extends StatelessWidget {
                               brandName: 'Nike',
                               productPrice: '399',
                               onTap: () => ProductDetailScreen(),
+                              isDiscount: false,
                             );
                           },
                         ),

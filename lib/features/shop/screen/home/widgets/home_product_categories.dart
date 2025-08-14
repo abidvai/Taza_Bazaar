@@ -31,7 +31,7 @@ class HomeProductCategories extends StatelessWidget {
         ),
         SizedBox(height: size.height * .01),
         SizedBox(
-          height: size.height * .11,
+          height: size.height * .12,
           child: VerticalImageText(
             size: size,
             dark: dark,

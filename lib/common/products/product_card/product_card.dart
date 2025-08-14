@@ -17,6 +17,7 @@ class ProductCard extends StatelessWidget {
   final String productPrice;
   final String? discountedDeprecated;
   final VoidCallback? onTap;
+  final bool isDiscount;
 
   const ProductCard({
     super.key,
@@ -25,7 +26,9 @@ class ProductCard extends StatelessWidget {
     required this.productTitle,
     required this.brandName,
     required this.productPrice,
-    this.discountedDeprecated = '', this.onTap,
+    this.discountedDeprecated = '',
+    this.onTap,
+    required this.isDiscount,
   });
 
   @override
@@ -64,7 +67,7 @@ class ProductCard extends StatelessWidget {
               child: PriceTagAddToCart(
                 productPrice: productPrice,
                 beforePrice: discountedDeprecated!,
-                isDiscounted: true,
+                isDiscounted: isDiscount,
                 onTap: () => Get.to(LoginScreen()),
               ),
             ),
