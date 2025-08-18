@@ -3,11 +3,13 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:taza_bazar/common/widgets/outline_button.dart';
 import 'package:taza_bazar/common/widgets/text/section_heading.dart';
+import 'package:taza_bazar/features/authentication/screens/login_screen/login_screen.dart';
 import 'package:taza_bazar/features/shop/screen/personalization/screen/change_address/change_address_screen.dart';
 import 'package:taza_bazar/features/shop/screen/personalization/screen/edit_profile/edit_profile_screen.dart';
 import 'package:taza_bazar/features/shop/screen/personalization/screen/my_orders/my_orders_screen.dart';
 import 'package:taza_bazar/features/shop/screen/personalization/screen/profile/widgets/profile_header_section.dart';
 import 'package:taza_bazar/features/shop/screen/personalization/screen/profile/widgets/settings_menu_item.dart';
+import 'package:taza_bazar/services/auth_api/auth_api_services.dart';
 import 'package:taza_bazar/utils/constants/colors.dart';
 
 
@@ -86,7 +88,9 @@ class ProfileScreen extends StatelessWidget {
                         ),
 
                         SizedBox(height: size.height * .024),
-                        AOutlineButton(context, 'Logout', () {}),
+                        AOutlineButton(context, 'Logout', () async {
+                          Get.offAll(LoginScreen());
+                        }),
                       ],
                     ),
                   ),

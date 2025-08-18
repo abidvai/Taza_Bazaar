@@ -18,6 +18,7 @@ class ProductHeadingPart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final dark = AHelperFunctions.isDarkMode(context);
+    final size = MediaQuery.sizeOf(context);
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -32,7 +33,7 @@ class ProductHeadingPart extends StatelessWidget {
           ),
           child: Stack(
             children: [
-              Image(image: AssetImage(image), fit: BoxFit.cover,),
+              Image(image: AssetImage(image), fit: BoxFit.contain, width: size.width, height: size.height * .2,),
               Positioned(
                 left: 5,
                 top: 5,

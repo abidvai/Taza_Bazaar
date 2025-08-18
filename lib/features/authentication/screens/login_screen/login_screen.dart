@@ -7,8 +7,10 @@ import 'package:taza_bazar/utils/constants/text.dart';
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
 
-  final emailController = TextEditingController();
+  final nameController = TextEditingController();
   final passwordController = TextEditingController();
+  final formKey = GlobalKey<FormState>();
+  final isCheck = false;
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +31,7 @@ class LoginScreen extends StatelessWidget {
                 SizedBox(height: size.height * .024),
 
                 /// ------------- Form section ---------------
-                ALoginForm(emailController: emailController, size: size, passwordController: passwordController),
+                loginForm(nameController: nameController, passwordController: passwordController, key: formKey, isCheck: isCheck, size: size, context: context),
 
                 /// ------------- Divider Section and Footer Section ------------
                 SizedBox(height: size.height * .024),

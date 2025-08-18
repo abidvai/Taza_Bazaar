@@ -3,35 +3,35 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:taza_bazar/features/authentication/screens/login_screen/widgets/text_input_field.dart';
 import 'package:taza_bazar/navigation_menu.dart';
+
 import '../../../../../common/widgets/filled_button.dart';
 import '../../../../../common/widgets/outline_button.dart';
 import '../../../../../utils/constants/text.dart';
 import '../../forget_password/forget_password_screen.dart';
 import '../../signup_screen/signup_screen.dart';
 
-class ALoginForm extends StatelessWidget {
-  const ALoginForm({
-    super.key,
-    required this.emailController,
-    required this.size,
-    required this.passwordController,
-  });
-
-  final TextEditingController emailController;
-  final Size size;
-  final TextEditingController passwordController;
-
-  @override
-  Widget build(BuildContext context) {
-    bool isCheck = false;
-
-    return Column(
+Widget loginForm({
+  required TextEditingController nameController,
+  required TextEditingController passwordController,
+  required GlobalKey<FormState> key,
+  required bool isCheck,
+  required Size size,
+  required BuildContext context,
+}) {
+  return Form(
+    key: key,
+    child: Column(
       children: [
         aTextInputField(
-          controller: emailController,
-          hint: 'Email',
+          controller: nameController,
+          hint: 'name',
           prefix: Iconsax.direct_right,
-          validation: (value) {},
+          validation: (value) {
+            if (value == null || value.isEmpty) {
+              return 'Password is required';
+            }
+            return null;
+          },
         ),
         SizedBox(height: size.height * .016),
         aTextInputField(
@@ -39,12 +39,16 @@ class ALoginForm extends StatelessWidget {
           hint: 'Password',
           prefix: Iconsax.password_check,
           suffix: Iconsax.eye_slash,
-          validation: (value) {},
+          validation: (value) {
+            if (value == null || value.isEmpty) {
+              return 'Password is required';
+            }
+            return null;
+          },
         ),
         SizedBox(height: size.height * .016),
 
         /// Remember me and forgot password
-
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -72,14 +76,21 @@ class ALoginForm extends StatelessWidget {
           ],
         ),
         SizedBox(height: size.height * .024),
-        AFilledButton(context, 'Sign In', () {
-          Get.to(NavigationMenu());
+        AFilledButton(context, 'Sign In', () async {
+          if (key.currentState!.validate()) {
+            Get.snackbar(
+              'login',
+              'login Successful',
+              snackPosition: SnackPosition.BOTTOM,
+            );
+            Get.to(NavigationMenu());
+          }
         }),
-        SizedBox(height: 8),
+        SizedBox(height: 10),
         AOutlineButton(context, 'Create Account', () {
           Get.to(SignupScreen());
         }),
       ],
-    );
-  }
+    ),
+  );
 }

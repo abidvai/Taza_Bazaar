@@ -20,11 +20,11 @@ class ProductBrand extends StatelessWidget {
           brandName,
           style:
               dark
-                  ? Theme.of(context).textTheme.bodyMedium!.copyWith(
+                  ? Theme.of(context).textTheme.titleMedium!.copyWith(
                     color: AColors.light.withValues(alpha: 0.5),
                     fontWeight: FontWeight.bold,
                   )
-                  : Theme.of(context).textTheme.bodyMedium!.copyWith(
+                  : Theme.of(context).textTheme.titleMedium!.copyWith(
                     color: AColors.dark.withValues(alpha: 0.8),
                     fontWeight: FontWeight.bold,
                   ),

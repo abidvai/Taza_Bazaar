@@ -56,7 +56,7 @@ class WishlistScreen extends StatelessWidget {
             productPrice: '124',
             isDiscount: false,
             onTap: () {
-              Get.to(ProductDetailScreen());
+
             },
           );
         },

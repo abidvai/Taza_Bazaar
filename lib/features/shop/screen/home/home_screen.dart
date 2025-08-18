@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:taza_bazar/common/custom_shape/clipper/aprimary_header_container.dart';
 import 'package:taza_bazar/common/products/cart/cart_counter.dart';
 import 'package:taza_bazar/common/textfields/searchbar.dart';
 import 'package:taza_bazar/features/shop/screen/home/widgets/a_promo_slider.dart';
-import 'package:taza_bazar/common/custom_shape/clipper/aprimary_header_container.dart';
 import 'package:taza_bazar/features/shop/screen/home/widgets/home_product_categories.dart';
 import 'package:taza_bazar/features/shop/screen/product_detail/product_detail_Screen.dart';
+import 'package:taza_bazar/services/product_api/product_api.dart';
 import 'package:taza_bazar/utils/constants/colors.dart';
 import 'package:taza_bazar/utils/constants/images.dart';
 import 'package:taza_bazar/utils/constants/text.dart';
@@ -107,30 +108,27 @@ class HomeScreen extends StatelessWidget {
                       physics: NeverScrollableScrollPhysics(),
                       padding: EdgeInsets.zero,
                       itemCount: 10,
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      gridDelegate:
+                      SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2,
                         crossAxisSpacing: size.width * .04,
                         mainAxisSpacing: 22,
-                        mainAxisExtent: size.height * .33,
+                        mainAxisExtent: size.height * .34,
                       ),
                       itemBuilder: (context, index) {
-                        return GestureDetector(
-                          onTap: () {
-                            Get.to(ProductDetailScreen());
-                          },
-                          child: ProductCard(
-                            discountPriceTag: '49%',
-                            productImage: AImages.product_15,
-                            brandName: 'Nike',
-                            productTitle: 'Shoes of Nike',
-                            productPrice: '399',
-                            discountedDeprecated: '599',
-                            onTap: () => Get.to(ProductDetailScreen()),
-                            isDiscount: true,
-                          ),
+
+                        return ProductCard(
+                          discountPriceTag: '49%',
+                          productImage: AImages.product_15,
+                          brandName: 'Nike',
+                          productTitle: "Blue Shoes of Nike",
+                          productPrice: '399',
+                          discountedDeprecated: '599',
+                          onTap: () => Get.to(ProductDetailScreen()),
+                          isDiscount: false,
                         );
                       },
-                    ),
+                    )
                   ),
                 ],
               ),

@@ -135,7 +135,7 @@ class StoreScreen extends StatelessWidget {
                               productTitle: 'Shoes of Nike',
                               brandName: 'Nike',
                               productPrice: '399',
-                              onTap: () => ProductDetailScreen(),
+                              onTap: (){},
                               isDiscount: false,
                             );
                           },
